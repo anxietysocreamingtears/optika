@@ -1,15 +1,4 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="32" fill="#111714"/>
-  <circle cx="40" cy="42" r="28" fill="#EB8A58" fill-opacity="0.9"/>
-  <circle cx="90" cy="88" r="24" fill="#74B7A5" fill-opacity="0.72"/>
-  <text
-    x="64"
-    y="78"
-    text-anchor="middle"
-    fill="#F8EFDF"
-    font-size="42"
-    font-weight="700"
-    font-family="Georgia, 'Times New Roman', serif"
-    letter-spacing="2"
-  >IK</text>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="18" fill="#FF7A00"/>
+  <path d="M18 43L26.8 31.5C27.8667 30.1 29.1333 29.4 30.6 29.4C31.9333 29.4 33.0667 29.8333 34 30.7C34.9333 31.5667 35.4 32.6667 35.4 34C35.4 35.3333 34.9333 36.4333 34 37.3C33.0667 38.1667 31.9333 38.6 30.6 38.6C29.8 38.6 29.0667 38.4333 28.4 38.1L24.8 43H18ZM43.8 20.2V43H36.4V20.2H43.8Z" fill="white"/>
 </svg>

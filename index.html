@@ -5,27 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Портфолио Ilya Krivaltsevich: выразительные digital-сайты, локальная типографика и плавные анимации без перегруженного JavaScript."
+    content="Ярко оптика — современный салон оптики: проверка зрения, подбор оправ, линзы и аксессуары в стильном городском формате."
   >
-  <title>Ilya Krivaltsevich | Creative Developer</title>
+  <meta name="theme-color" content="#FF7A00">
+  <title>Ярко оптика | Четкое зрение — яркая жизнь</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/CormorantGaramond-700.ttf" as="font" type="font/ttf">
-  <link rel="preload" href="assets/fonts/Manrope-500.ttf" as="font" type="font/ttf">
+  <link rel="preload" href="assets/fonts/CormorantGaramond-700.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Manrope-500.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div class="page-glow page-glow--amber" aria-hidden="true"></div>
-  <div class="page-glow page-glow--sea" aria-hidden="true"></div>
+  <div class="page-blur page-blur--primary" aria-hidden="true"></div>
+  <div class="page-blur page-blur--soft" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="#top" aria-label="На главную">
-        <span class="brand__mark">IK</span>
-        <span class="brand__text">
-          <strong>Ilya Krivaltsevich</strong>
-          <span>creative developer</span>
-        </span>
+      <a class="brand" href="#top" aria-label="Ярко оптика">
+        <img src="assets/images/logo-wordmark.svg" alt="Ярко оптика" width="180" height="64">
       </a>
 
       <button
@@ -40,220 +38,233 @@
       </button>
 
       <nav class="site-nav" id="site-menu">
-        <a href="#projects">Проекты</a>
-        <a href="#about">Обо мне</a>
+        <a href="#top">Главная</a>
+        <a href="#catalog">Каталог</a>
         <a href="#services">Услуги</a>
-        <a href="#process">Процесс</a>
-        <a href="#contact" class="site-nav__cta">Контакт</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+        <a class="button button--primary button--sm site-nav__button" href="#cta">Записаться</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero section">
+    <section class="section hero">
       <div class="container hero__grid">
         <div class="hero__content" data-reveal>
-          <p class="eyebrow">Self-hosted type / Motion-driven layouts / Visual storytelling</p>
-          <h1>Собираю сайты, которые ощущаются как хорошо поставленная сцена, а не как шаблон.</h1>
+          <p class="eyebrow">Салон оптики в Минске</p>
+          <h1>Четкое зрение — яркая жизнь</h1>
           <p class="hero__lede">
-            Я работаю на стыке frontend, арт-дирекшна и digital-стайлинга: проектирую портфолио,
-            промо-сайты и визуальные страницы, в которых ритм, воздух и анимация работают вместе.
+            Подбираем оправы, солнцезащитные очки и линзы так, чтобы ежедневный комфорт выглядел так же
+            хорошо, как ощущается. Проверка зрения, консультация и персональный подбор в одном пространстве.
           </p>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="#projects">Смотреть кейсы</a>
-            <a class="button button--ghost" href="#contact">Обсудить проект</a>
+            <a class="button button--primary" href="#catalog">Смотреть каталог</a>
+            <a class="button button--ghost" href="#cta">Записаться на проверку</a>
           </div>
 
-          <ul class="hero__facts" aria-label="Ключевые факты">
+          <ul class="hero__facts" aria-label="Преимущества Ярко оптика">
             <li>
-              <strong>12+</strong>
-              <span>запусков для портфолио и студий</span>
+              <strong>700+</strong>
+              <span>оправ в наличии для города, офиса и активного ритма</span>
             </li>
             <li>
-              <strong>3</strong>
-              <span>недели в среднем до первого релиза</span>
+              <strong>20 мин</strong>
+              <span>занимает экспресс-проверка зрения с рекомендациями</span>
             </li>
             <li>
-              <strong>100%</strong>
-              <span>локальные шрифты и аккуратная ручная вёрстка</span>
+              <strong>1 день</strong>
+              <span>на изготовление части заказов при наличии линз</span>
             </li>
           </ul>
         </div>
 
         <div class="hero__visual" data-reveal data-reveal-delay="120">
-          <div class="orbital-frame">
-            <div class="orbital-frame__ring orbital-frame__ring--outer"></div>
-            <div class="orbital-frame__ring orbital-frame__ring--inner"></div>
-            <div class="orbital-card">
-              <span class="orbital-card__label">Available for selected collaborations</span>
-              <h2>Digital experiences with calm motion and editorial precision.</h2>
-              <p>
-                Внутри каждого проекта я соединяю типографику, слои света, мягкие переходы и код,
-                который остаётся лёгким и понятным.
-              </p>
+          <div class="hero-showcase">
+            <div class="hero-showcase__badge">
+              <img src="assets/images/logo-badge.svg" alt="Ярко оптика" width="120" height="120">
+            </div>
+
+            <div class="hero-showcase__card">
+              <img
+                class="hero-showcase__image"
+                src="assets/images/hero-display.svg"
+                alt="Стильная композиция с очками и фирменным знаком Ярко оптика"
+                width="640"
+                height="720"
+              >
+            </div>
+
+            <div class="hero-note hero-note--top">
+              <span>Сегодня</span>
+              <strong>Проверка зрения + подбор оправы</strong>
+            </div>
+
+            <div class="hero-note hero-note--bottom">
+              <span>Городская оптика</span>
+              <strong>Минимализм, комфорт, точный подбор</strong>
             </div>
           </div>
-
-          <aside class="glass-panel hero__aside">
-            <div>
-              <span class="glass-panel__caption">Сейчас беру</span>
-              <strong>2 проекта на май</strong>
-            </div>
-            <p>Под портфолио, fashion, lifestyle, интерьерные студии и авторские бренды.</p>
-          </aside>
-        </div>
-      </div>
-
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker__track">
-          <span>portfolio direction</span>
-          <span>frontend craft</span>
-          <span>motion details</span>
-          <span>self-hosted fonts</span>
-          <span>visual systems</span>
-          <span>portfolio direction</span>
-          <span>frontend craft</span>
-          <span>motion details</span>
-          <span>self-hosted fonts</span>
-          <span>visual systems</span>
         </div>
       </div>
     </section>
 
-    <section class="section section--projects" id="projects">
+    <section class="section section--products" id="popular">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Selected work</p>
-          <h2>Кейсы, где визуальная тишина работает сильнее шума.</h2>
+          <p class="eyebrow">Подборка недели</p>
+          <h2>Популярные товары</h2>
           <p>
-            Ниже три направления, на которых лучше всего видно мой подход: тонкая драматургия,
-            выразительные композиции и немного motion-драмы ровно там, где она усиливает опыт.
+            Витрина собрана как редакционный дроп: чистые формы, легкие материалы и решения для повседневного
+            комфорта без перегруза.
           </p>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card project-card--feature" data-reveal data-tilt>
-            <div class="project-card__preview">
-              <div class="project-art project-art--nocturne">
-                <div class="project-art__badge">Nocturne Atelier</div>
-                <div class="project-art__stack">
-                  <span>editorial landing</span>
-                  <span>motion layers</span>
-                  <span>design system</span>
-                </div>
-              </div>
+        <div class="product-grid product-grid--featured">
+          <article class="product-card" data-tilt data-reveal>
+            <div class="product-card__media product-card__media--warm">
+              <img src="assets/images/product-glasses.svg" alt="Оправа Urban Air 02" width="520" height="360">
             </div>
-
-            <div class="project-card__body">
-              <div class="project-card__meta">
-                <span>2026</span>
-                <span>Strategy / UI / Frontend</span>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span>Очки</span>
+                <span>Легкий титан</span>
               </div>
-              <h3>Промо-сайт интерьерной студии с ритмом журнальной обложки и мягкой кинематографичной подачей.</h3>
-              <p>
-                В этом кейсе акцент смещён на текстуру, воздух и свет. Я использовала асимметричную сетку,
-                тонкие слои blur и спокойные анимации, чтобы сайт выглядел дорогим даже без перегруза.
-              </p>
-              <ul class="chip-list" aria-label="Технологии проекта Nocturne Atelier">
-                <li>HTML</li>
-                <li>CSS architecture</li>
-                <li>Micro interactions</li>
-                <li>Performance-first</li>
-              </ul>
-              <dl class="project-stats">
-                <div>
-                  <dt>+42%</dt>
-                  <dd>заявок с первого экрана</dd>
-                </div>
-                <div>
-                  <dt>01:58</dt>
-                  <dd>среднее время на странице</dd>
-                </div>
-              </dl>
+              <h3>Urban Air 02</h3>
+              <p>Ультралегкая оправа для повседневного ношения и долгой работы за экраном.</p>
+              <div class="product-card__footer">
+                <strong>от 179 BYN</strong>
+                <a class="button button--ghost button--sm" href="#cta">Хочу примерить</a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card project-card--half" data-reveal data-reveal-delay="80" data-tilt>
-            <div class="project-card__preview">
-              <div class="project-art project-art--lumen">
-                <div class="project-art__badge">Lumen Frames</div>
-                <div class="project-art__circle"></div>
-              </div>
+          <article class="product-card" data-tilt data-reveal data-reveal-delay="70">
+            <div class="product-card__media product-card__media--sun">
+              <img src="assets/images/product-sun.svg" alt="Солнцезащитные очки Solar Edge" width="520" height="360">
             </div>
-
-            <div class="project-card__body">
-              <div class="project-card__meta">
-                <span>Portfolio system</span>
-                <span>2025</span>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span>Солнцезащитные</span>
+                <span>UV400</span>
               </div>
-              <h3>Личный сайт арт-директора с модульными блоками и аккуратной сменой темпа.</h3>
-              <p>
-                Главная задача была сделать сайт живым, но не крикливым. Поэтому визуал строится на
-                глубине, типографическом контрасте и лёгких hover-переходах.
-              </p>
+              <h3>Solar Edge</h3>
+              <p>Архитектурная форма, мягкий градиент линз и уверенный городской характер.</p>
+              <div class="product-card__footer">
+                <strong>от 149 BYN</strong>
+                <a class="button button--ghost button--sm" href="#cta">Записаться</a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card project-card--half" data-reveal data-reveal-delay="160" data-tilt>
-            <div class="project-card__preview">
-              <div class="project-art project-art--asteria">
-                <div class="project-art__badge">Asteria Notes</div>
-                <div class="project-art__line"></div>
+          <article class="product-card" data-tilt data-reveal data-reveal-delay="140">
+            <div class="product-card__media product-card__media--soft">
+              <img src="assets/images/product-lenses.svg" alt="Контактные линзы Daily Soft 30" width="520" height="360">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span>Линзы</span>
+                <span>30 шт</span>
+              </div>
+              <h3>Daily Soft 30</h3>
+              <p>Ежедневные линзы с комфортной посадкой и увлажняющим покрытием.</p>
+              <div class="product-card__footer">
+                <strong>от 36 BYN</strong>
+                <a class="button button--ghost button--sm" href="#cta">Заказать</a>
               </div>
             </div>
+          </article>
 
-            <div class="project-card__body">
-              <div class="project-card__meta">
-                <span>Product story</span>
-                <span>2025</span>
+          <article class="product-card" data-tilt data-reveal data-reveal-delay="210">
+            <div class="product-card__media product-card__media--dark">
+              <img src="assets/images/product-accessories.svg" alt="Набор аксессуаров Care Kit Pro" width="520" height="360">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span>Аксессуары</span>
+                <span>Уход</span>
               </div>
-              <h3>Сайт-история для digital-продукта, где важнее ощущение доверия, чем прямой нажим.</h3>
-              <p>
-                Здесь я собрала тёплую палитру, протяжённый scroll и мягкое раскрытие секций, чтобы
-                визуальный опыт казался спокойным и уверенным.
-              </p>
+              <h3>Care Kit Pro</h3>
+              <p>Футляр, салфетка и спрей для ухода за оптикой в одном аккуратном наборе.</p>
+              <div class="product-card__footer">
+                <strong>от 24 BYN</strong>
+                <a class="button button--ghost button--sm" href="#cta">Добавить</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-tilt data-reveal data-reveal-delay="280">
+            <div class="product-card__media product-card__media--warm">
+              <img src="assets/images/product-glasses.svg" alt="Оправа Titan Slim" width="520" height="360">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span>Очки</span>
+                <span>Премиум</span>
+              </div>
+              <h3>Titan Slim</h3>
+              <p>Тонкая геометрия и теплый металлический оттенок для чистого повседневного образа.</p>
+              <div class="product-card__footer">
+                <strong>от 229 BYN</strong>
+                <a class="button button--ghost button--sm" href="#cta">Выбрать</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-tilt data-reveal data-reveal-delay="350">
+            <div class="product-card__media product-card__media--soft">
+              <img src="assets/images/product-glasses.svg" alt="Детская оправа Kids Flex" width="520" height="360">
+            </div>
+            <div class="product-card__body">
+              <div class="product-card__meta">
+                <span>Детские очки</span>
+                <span>Гибкая оправа</span>
+              </div>
+              <h3>Kids Flex</h3>
+              <p>Яркая, легкая и устойчивая модель для активных детей и спокойных родителей.</p>
+              <div class="product-card__footer">
+                <strong>от 119 BYN</strong>
+                <a class="button button--ghost button--sm" href="#cta">Примерить</a>
+              </div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--about" id="about">
-      <div class="container about-grid">
+    <section class="section section--categories" aria-labelledby="categories-title">
+      <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">About</p>
-          <h2>Мне ближе не “ярче”, а “точнее”.</h2>
-          <p>
-            Я люблю сайты, которые не пытаются понравиться всем сразу. Вместо этого они держат настроение,
-            ведут пользователя в нужном ритме и оставляют послевкусие.
-          </p>
+          <p class="eyebrow">Навигация по коллекциям</p>
+          <h2 id="categories-title">Категории</h2>
+          <p>Подборка разбита по сценариям использования: от рабочих оправ до аксессуаров на каждый день.</p>
         </div>
 
-        <div class="glass-panel about-panel" data-reveal data-reveal-delay="120">
-          <p class="about-panel__lead">
-            Сильнее всего я работаю с теми проектами, где нужно совместить визуальную выразительность
-            и внятную frontend-реализацию без ощущения тяжёлой сборки.
-          </p>
+        <div class="category-grid">
+          <article class="category-card" data-reveal>
+            <span class="category-card__index">01</span>
+            <h3>Очки</h3>
+            <p>Легкие металлические, выразительные ацетатные и универсальные модели на каждый день.</p>
+          </article>
 
-          <div class="about-panel__grid">
-            <div>
-              <span>Visual language</span>
-              <strong>Редакционный стиль, крупные акценты, умная пустота.</strong>
-            </div>
-            <div>
-              <span>Code approach</span>
-              <strong>Лёгкая структура, чистые классы, минимум лишнего JavaScript.</strong>
-            </div>
-            <div>
-              <span>Experience</span>
-              <strong>Адаптив, hover-сцены, scroll reveal и внимание к ритму деталей.</strong>
-            </div>
-            <div>
-              <span>Best fit</span>
-              <strong>Портфолио, студии, бренды, концепт-сайты, fashion и lifestyle.</strong>
-            </div>
-          </div>
+          <article class="category-card" data-reveal data-reveal-delay="90">
+            <span class="category-card__index">02</span>
+            <h3>Солнцезащитные очки</h3>
+            <p>Модели с UV-защитой, поляризацией и актуальными силуэтами для города и путешествий.</p>
+          </article>
+
+          <article class="category-card" data-reveal data-reveal-delay="180">
+            <span class="category-card__index">03</span>
+            <h3>Линзы</h3>
+            <p>Ежедневные, ежемесячные и астигматические решения с акцентом на комфорт и понятный подбор.</p>
+          </article>
+
+          <article class="category-card" data-reveal data-reveal-delay="270">
+            <span class="category-card__index">04</span>
+            <h3>Аксессуары</h3>
+            <p>Футляры, салфетки, спреи и компактные наборы ухода, которые удобно брать с собой.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -261,116 +272,279 @@
     <section class="section section--services" id="services">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Services</p>
-          <h2>Что я делаю, когда проекту нужен не просто экран, а характер.</h2>
+          <p class="eyebrow">Экспертная помощь</p>
+          <h2>Услуги</h2>
+          <p>Не просто продаем оправы, а закрываем весь путь от диагностики до готового комфортного решения.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card" data-reveal>
-            <span class="service-card__index">01</span>
-            <h3>Портфолио и промо-сайты</h3>
-            <p>
-              Собираю одностраничные и многоэкранные сайты, которые выглядят собранно и дорого уже на
-              первом скролле.
-            </p>
+            <span class="service-card__tag">01</span>
+            <h3>Проверка зрения</h3>
+            <p>Экспресс-диагностика для взрослых и подростков с рекомендацией по дальнейшему подбору.</p>
           </article>
 
-          <article class="service-card" data-reveal data-reveal-delay="90">
-            <span class="service-card__index">02</span>
-            <h3>Визуальная система</h3>
-            <p>
-              Подбираю палитру, типографическую иерархию, логику карточек, сеток и элементов, чтобы сайт
-              не распался после первого редизайна.
-            </p>
+          <article class="service-card" data-reveal data-reveal-delay="100">
+            <span class="service-card__tag">02</span>
+            <h3>Подбор очков</h3>
+            <p>Помогаем найти оправу под форму лица, стиль, привычки и необходимую толщину линз.</p>
           </article>
 
-          <article class="service-card" data-reveal data-reveal-delay="180">
-            <span class="service-card__index">03</span>
-            <h3>Motion и polish</h3>
-            <p>
-              Добавляю движения ровно столько, сколько нужно для глубины, мягкости и ощущения премиального интерфейса.
-            </p>
+          <article class="service-card" data-reveal data-reveal-delay="200">
+            <span class="service-card__tag">03</span>
+            <h3>Ремонт</h3>
+            <p>Регулировка посадки, замена носоупоров, мелкий ремонт и уход, чтобы любимая пара служила дольше.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--process" id="process">
+    <section class="section section--about" id="about">
+      <div class="container about">
+        <div class="about__intro" data-reveal>
+          <p class="eyebrow">Почему выбирают нас</p>
+          <h2>Премиальный сервис без лишнего пафоса</h2>
+          <p>
+            «Ярко оптика» сочетает точную экспертизу с современным визуальным языком: здесь удобно выбирать,
+            легко ориентироваться и приятно возвращаться.
+          </p>
+        </div>
+
+        <div class="advantage-grid">
+          <article class="advantage-card" data-reveal>
+            <h3>Гарантия</h3>
+            <p>Официальная гарантия на оправы и линзы, понятные условия и постсервисная поддержка.</p>
+          </article>
+
+          <article class="advantage-card" data-reveal data-reveal-delay="90">
+            <h3>Опыт</h3>
+            <p>Собираем решения под ежедневный сценарий: работа, вождение, прогулки, спорт и экранные нагрузки.</p>
+          </article>
+
+          <article class="advantage-card" data-reveal data-reveal-delay="180">
+            <h3>Качество</h3>
+            <p>Работаем с надежными материалами, современными покрытиями и проверенными производителями линз.</p>
+          </article>
+
+          <article class="advantage-card" data-reveal data-reveal-delay="270">
+            <h3>Быстрое обслуживание</h3>
+            <p>Запись без очередей, понятная консультация и быстрый маршрут от входа до готового заказа.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--catalog" id="catalog">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Process</p>
-          <h2>Рабочий процесс, в котором эстетика не мешает запуску.</h2>
+          <p class="eyebrow">Витрина</p>
+          <h2>Каталог</h2>
+          <p>Добавил легкий фильтр и поиск на чистом фронтенде, чтобы сайт выглядел живым даже без backend-части.</p>
         </div>
 
-        <div class="process-grid">
-          <article class="process-step" data-reveal>
-            <span>01</span>
-            <h3>Смотрим настроение</h3>
-            <p>Определяю референс-напряжение проекта: насколько он должен быть тихим, дерзким или журнальным.</p>
+        <div class="catalog-toolbar" data-reveal data-reveal-delay="90">
+          <div class="catalog-filters" role="tablist" aria-label="Фильтр каталога">
+            <button class="catalog-filter is-active" type="button" data-filter="all">Все</button>
+            <button class="catalog-filter" type="button" data-filter="glasses">Очки</button>
+            <button class="catalog-filter" type="button" data-filter="sun">Солнцезащитные</button>
+            <button class="catalog-filter" type="button" data-filter="lenses">Линзы</button>
+            <button class="catalog-filter" type="button" data-filter="accessories">Аксессуары</button>
+          </div>
+
+          <label class="catalog-search">
+            <span class="sr-only">Поиск по каталогу</span>
+            <input type="search" placeholder="Поиск по названию" data-catalog-search>
+          </label>
+        </div>
+
+        <div class="catalog-meta" data-reveal data-reveal-delay="150">
+          <p data-results-count>8 позиций в каталоге</p>
+          <a href="#cta">Нужна персональная консультация?</a>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-card" data-category="glasses" data-name="Urban Air 02" data-reveal>
+            <div class="catalog-card__media catalog-card__media--warm">
+              <img src="assets/images/product-glasses.svg" alt="Urban Air 02" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Urban Air 02</h3>
+              <p>Тонкая титановая оправа для ежедневного комфорта.</p>
+              <strong>179 BYN</strong>
+            </div>
           </article>
 
-          <article class="process-step" data-reveal data-reveal-delay="70">
-            <span>02</span>
-            <h3>Строим каркас</h3>
-            <p>Собираю структуру секций, смыслы первого экрана, сетку и сценарий, по которому пользователь будет читать сайт.</p>
+          <article class="catalog-card" data-category="sun" data-name="Solar Edge" data-reveal data-reveal-delay="60">
+            <div class="catalog-card__media catalog-card__media--sun">
+              <img src="assets/images/product-sun.svg" alt="Solar Edge" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Solar Edge</h3>
+              <p>Солнцезащитная модель с мягким градиентом линз.</p>
+              <strong>149 BYN</strong>
+            </div>
           </article>
 
-          <article class="process-step" data-reveal data-reveal-delay="140">
-            <span>03</span>
-            <h3>Добавляем глубину</h3>
-            <p>На этом шаге появляются локальные шрифты, декоративные слои, hover-детали и мягкие reveal-анимации.</p>
+          <article class="catalog-card" data-category="lenses" data-name="Daily Soft 30" data-reveal data-reveal-delay="120">
+            <div class="catalog-card__media catalog-card__media--soft">
+              <img src="assets/images/product-lenses.svg" alt="Daily Soft 30" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Daily Soft 30</h3>
+              <p>Ежедневные линзы с комфортным увлажняющим слоем.</p>
+              <strong>36 BYN</strong>
+            </div>
           </article>
 
-          <article class="process-step" data-reveal data-reveal-delay="210">
-            <span>04</span>
-            <h3>Полируем релиз</h3>
-            <p>Проверяю адаптив, контраст, воздух между блоками и убираю всё, что добавляет шум вместо ценности.</p>
+          <article class="catalog-card" data-category="accessories" data-name="Care Kit Pro" data-reveal data-reveal-delay="180">
+            <div class="catalog-card__media catalog-card__media--dark">
+              <img src="assets/images/product-accessories.svg" alt="Care Kit Pro" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Care Kit Pro</h3>
+              <p>Набор для ухода за очками и солнцезащитными моделями.</p>
+              <strong>24 BYN</strong>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-category="glasses" data-name="Titan Slim" data-reveal>
+            <div class="catalog-card__media catalog-card__media--warm">
+              <img src="assets/images/product-glasses.svg" alt="Titan Slim" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Titan Slim</h3>
+              <p>Элегантная оправа с чистой геометрией и теплым оттенком.</p>
+              <strong>229 BYN</strong>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-category="glasses" data-name="Kids Flex" data-reveal data-reveal-delay="60">
+            <div class="catalog-card__media catalog-card__media--soft">
+              <img src="assets/images/product-glasses.svg" alt="Kids Flex" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Kids Flex</h3>
+              <p>Гибкая детская оправа с мягкой посадкой и ярким характером.</p>
+              <strong>119 BYN</strong>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-category="sun" data-name="Amber Coast" data-reveal data-reveal-delay="120">
+            <div class="catalog-card__media catalog-card__media--sun">
+              <img src="assets/images/product-sun.svg" alt="Amber Coast" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Amber Coast</h3>
+              <p>Широкая солнцезащитная оправа с выразительным силуэтом.</p>
+              <strong>169 BYN</strong>
+            </div>
+          </article>
+
+          <article class="catalog-card" data-category="lenses" data-name="Monthly Clear" data-reveal data-reveal-delay="180">
+            <div class="catalog-card__media catalog-card__media--soft">
+              <img src="assets/images/product-lenses.svg" alt="Monthly Clear" width="520" height="360">
+            </div>
+            <div class="catalog-card__body">
+              <h3>Monthly Clear</h3>
+              <p>Месячные линзы для стабильного повседневного использования.</p>
+              <strong>42 BYN</strong>
+            </div>
           </article>
         </div>
+
+        <p class="catalog-empty" hidden data-catalog-empty>
+          Ничего не найдено. Попробуйте другой запрос или переключите категорию.
+        </p>
       </div>
     </section>
 
-    <section class="section section--quotes">
-      <div class="container quote-grid">
-        <blockquote class="quote-card" data-reveal>
-          <p>“Сайт выглядит как готовая арт-съёмка: спокойно, дорого и без ощущения, что он был собран из чужих кусков.”</p>
-          <footer>Лид бренда, fashion concept</footer>
-        </blockquote>
-
-        <blockquote class="quote-card" data-reveal data-reveal-delay="120">
-          <p>“Самое ценное было в том, что визуальный эффект не развалил структуру. Всё осталось быстрым и понятным.”</p>
-          <footer>Основатель студии, client note</footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="section section--contact" id="contact">
+    <section class="section section--reviews">
       <div class="container">
-        <div class="contact-panel" data-reveal>
-          <div class="contact-panel__content">
-            <p class="eyebrow">Contact</p>
-            <h2>Если нужен сайт, который выглядит как самостоятельная работа, а не как конструктор, давай соберём его вместе.</h2>
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Отзывы</p>
+          <h2>Люди возвращаются не только за оправами</h2>
+          <p>Карточки отзывов поддерживают доверие и добавляют сайту ощущение живого, реального сервиса.</p>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card" data-reveal>
             <p>
-              Этот проект уже готов как полноценная база под твоё портфолио. Тексты, кейсы, имя и ссылки можно
-              быстро заменить под себя без переписывания всей структуры.
+              “Очень спокойный сервис: быстро проверили зрение, помогли выбрать оправу и ничего не навязывали.
+              Сайт передает это ощущение один в один.”
+            </p>
+            <strong>Анна, 29 лет</strong>
+          </article>
+
+          <article class="review-card" data-reveal data-reveal-delay="90">
+            <p>
+              “Подобрали линзы и солнцезащитные очки за один визит. Понравилось, что все выглядит современно и
+              при этом очень понятно.”
+            </p>
+            <strong>Максим, 34 года</strong>
+          </article>
+
+          <article class="review-card" data-reveal data-reveal-delay="180">
+            <p>
+              “Редко встречается оптика, где одинаково хорошо и с дизайном, и с консультацией. Здесь именно так.”
+            </p>
+            <strong>Екатерина, 41 год</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="cta">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-panel__content">
+            <p class="eyebrow">Запись</p>
+            <h2>Запишитесь на подбор и проверьте зрение в удобное время</h2>
+            <p>
+              Для статического сайта добавил понятный CTA-блок с контактами: его можно оставить как есть или позже
+              привязать к форме записи, мессенджеру или CRM.
             </p>
           </div>
 
-          <div class="contact-panel__actions">
-            <a class="button button--primary" href="mailto:hello@alyamoroz.dev">hello@alyamoroz.dev</a>
-            <a class="button button--ghost" href="https://github.com/anxietysocreamingtears" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
+          <div class="cta-panel__actions">
+            <a class="button button--primary" href="tel:+375295551818">+375 (29) 555-18-18</a>
+            <a class="button button--ghost" href="mailto:hello@yarko-optika.by">hello@yarko-optika.by</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <p>&copy; <span data-year></span> Ilya Krivaltsevich. Crafted with HTML, CSS and restrained JavaScript.</p>
-      <a href="#top">Наверх</a>
+  <footer class="site-footer" id="contacts">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="assets/images/logo-wordmark.svg" alt="Ярко оптика" width="164" height="58">
+          <p>Современная оптика с акцентом на точный подбор, спокойный сервис и визуально чистый опыт.</p>
+        </div>
+
+        <div class="site-footer__column">
+          <h3>Контакты</h3>
+          <a href="tel:+375295551818">+375 (29) 555-18-18</a>
+          <a href="mailto:hello@yarko-optika.by">hello@yarko-optika.by</a>
+        </div>
+
+        <div class="site-footer__column">
+          <h3>Адрес</h3>
+          <p>Минск, проспект Независимости, 58</p>
+          <p>Ежедневно: 10:00-21:00</p>
+        </div>
+
+        <div class="site-footer__column">
+          <h3>Соцсети</h3>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://t.me" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="#top">Вернуться наверх</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Ярко оптика. Static-first сайт для GitHub Pages.</p>
+      </div>
     </div>
   </footer>
 </body>
