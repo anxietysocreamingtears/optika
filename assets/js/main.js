@@ -4,9 +4,16 @@ const navMenu = document.querySelector(".site-nav");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const tiltCards = document.querySelectorAll("[data-tilt]");
 const yearTarget = document.querySelector("[data-year]");
+const filterButtons = document.querySelectorAll(".catalog-filter");
+const catalogCards = document.querySelectorAll(".catalog-card");
+const searchInput = document.querySelector("[data-catalog-search]");
+const resultsCount = document.querySelector("[data-results-count]");
+const emptyState = document.querySelector("[data-catalog-empty]");
+
+let activeFilter = "all";
 
 const syncHeader = () => {
-  header?.classList.toggle("is-scrolled", window.scrollY > 24);
+  header?.classList.toggle("is-scrolled", window.scrollY > 20);
 };
 
 const closeMenu = () => {
@@ -19,6 +26,39 @@ const closeMenu = () => {
   document.body.classList.remove("nav-open");
 };
 
+const normalizeText = (value) => value.trim().toLowerCase();
+
+const applyCatalogFilters = () => {
+  if (!catalogCards.length) {
+    return;
+  }
+
+  const query = normalizeText(searchInput?.value ?? "");
+  let visibleCount = 0;
+
+  catalogCards.forEach((card) => {
+    const category = card.dataset.category ?? "";
+    const name = normalizeText(card.dataset.name ?? "");
+    const matchesFilter = activeFilter === "all" || category === activeFilter;
+    const matchesQuery = !query || name.includes(query);
+    const isVisible = matchesFilter && matchesQuery;
+
+    card.classList.toggle("is-hidden", !isVisible);
+
+    if (isVisible) {
+      visibleCount += 1;
+    }
+  });
+
+  if (resultsCount) {
+    resultsCount.textContent = `${visibleCount} позиций в каталоге`;
+  }
+
+  if (emptyState) {
+    emptyState.hidden = visibleCount !== 0;
+  }
+};
+
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
 
@@ -29,6 +69,7 @@ if (yearTarget) {
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
     const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+
     navToggle.setAttribute("aria-expanded", String(!isOpen));
     navMenu.classList.toggle("is-open", !isOpen);
     document.body.classList.toggle("nav-open", !isOpen);
@@ -37,40 +78,48 @@ if (navToggle && navMenu) {
   navMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => closeMenu());
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 920) {
+      closeMenu();
+    }
+  });
 }
 
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  },
-  {
-    threshold: 0.18,
-    rootMargin: "0px 0px -40px 0px"
-  }
-);
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: "0px 0px -32px 0px"
+    }
+  );
 
-revealItems.forEach((item) => {
-  const delay = item.dataset.revealDelay;
+  revealItems.forEach((item) => {
+    const delay = item.dataset.revealDelay;
 
-  if (delay) {
-    item.style.setProperty("--reveal-delay", `${delay}ms`);
-  }
+    if (delay) {
+      item.style.setProperty("--reveal-delay", `${delay}ms`);
+    }
 
-  revealObserver.observe(item);
-});
+    revealObserver.observe(item);
+  });
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
 
-const canHover = window.matchMedia("(hover: hover)").matches;
-
-if (canHover) {
+if (window.matchMedia("(hover: hover)").matches) {
   tiltCards.forEach((card) => {
-    const maxTilt = 7;
+    const maxTilt = 6;
 
     const resetTilt = () => {
       card.style.setProperty("--tilt-x", "0deg");
@@ -92,3 +141,25 @@ if (canHover) {
     card.addEventListener("pointercancel", resetTilt);
   });
 }
+
+filterButtons.forEach((button) => {
+  const isActive = button.dataset.filter === activeFilter;
+  button.classList.toggle("is-active", isActive);
+  button.setAttribute("aria-pressed", String(isActive));
+
+  button.addEventListener("click", () => {
+    activeFilter = button.dataset.filter ?? "all";
+
+    filterButtons.forEach((filterButton) => {
+      const selected = filterButton === button;
+      filterButton.classList.toggle("is-active", selected);
+      filterButton.setAttribute("aria-pressed", String(selected));
+    });
+
+    applyCatalogFilters();
+  });
+});
+
+searchInput?.addEventListener("input", applyCatalogFilters);
+
+applyCatalogFilters();
