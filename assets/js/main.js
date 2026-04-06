@@ -80,7 +80,7 @@ if (navToggle && navMenu) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 920) {
+    if (window.innerWidth >= 960) {
       closeMenu();
     }
   });
