@@ -17,15 +17,13 @@
 - `assets/fonts/` — локальные шрифты
 - `assets/images/favicon.svg` — иконка сайта
 
-## Как запустить
+## Как открыть сайт
 
-Открой `index.html` в браузере или подними любой локальный статический сервер.
+После пуша в `main` сайт публикуется через GitHub Pages.
 
-Пример через Python:
+Основная ссылка для этого репозитория:
 
-```bash
-python -m http.server 8000
-```
+- `https://anxietysocreamingtears.github.io/global_project/`
 
 ## Что проще всего заменить под себя
 
